@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--//////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2017 VNPT Long An                                                  //
+// All rights reserved.                                                             //
+// Create Date :24-02-2017                                                          //
+// Modify Date :                                                                    //
+// Create By Nguyễn Minh Triết.                                                     //
+//////////////////////////////////////////////////////////////////////////////////////-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CableMan.View.PageTramVTGanDay"
+             Title="Các Trạm Viễn Thông Khả Dụng">
+    <ContentPage.Content>
+        <ListView  x:Name="ListViewTramVtGanDay" RowHeight="65" IsGroupingEnabled="true" GroupDisplayBinding="{Binding LongName}" GroupShortNameBinding="{Binding ShortName}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout BackgroundColor="White"
+                        Orientation="Vertical">
+                            <StackLayout Orientation="Horizontal">
+                                <Image Source="{Binding FType}" />
+                                <StackLayout>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="3*"></ColumnDefinition>
+                                            <ColumnDefinition Width="*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions  >
+                                        <Label Grid.Row="0" Grid.Column="0" Text="{Binding CABI_NAME}" TextColor="Black" FontAttributes="Bold"/>
+                                        <Label Grid.Row="0" Grid.Column="1" Text="{Binding KC}" TextColor="Gray" HorizontalOptions="EndAndExpand"/>
+                                        <Label Grid.Row="1" Grid.Column="0" Text="{Binding CABI_ADDR}" TextColor="Gray" FontSize="10.5" />
+                                        <Label Grid.Row="1" Grid.Column="1" Text="{Binding DungLuong}"  TextColor="Gray" HorizontalOptions="EndAndExpand"/>
+                                        <Label Grid.Row="2" Grid.Column="0" Text="{Binding DLCapDen}" TextColor="Black"/>
+                                        <Label Grid.Row="2" Grid.Column="1" Text="{Binding SoThueBao}" TextColor="Blue" HorizontalOptions="EndAndExpand"/>
+                                    </Grid>
+                                </StackLayout>
+                            </StackLayout>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </ContentPage.Content>
+</ContentPage>

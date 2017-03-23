@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CableMan.View.PageMenu" Icon="App_Menu.png" Title="Menu" > <!--BackgroundColor="Transparent"-->
+
+    <ScrollView>
+        <StackLayout>
+            <StackLayout BackgroundColor="Black">
+                <Label ></Label>
+                <Label></Label>
+                <Label></Label>
+                <Label Text="{Binding Name}" Font="15" FontAttributes="Bold" TextColor="White"></Label>
+                <Label Text="{Binding User}" Font="15" FontAttributes="Bold" TextColor="#EFEBE9"></Label>
+            </StackLayout>
+           
+
+            <!--<Label Text="{Binding Phone}" Font="10.5" FontAttributes="Bold" TextColor="#EFEBE9"></Label>-->
+            <!--<Image Source="MenuVNPT.png" HeightRequest="80" Aspect="Fill"/>-->
+            <ListView x:Name="ListMenu"  BackgroundColor="White" >
+                <!--ItemTapped="ListviewMenuItem_OnItemTapped"  ItemSelected="ListviewMenuItem_OnItemSelected"-->
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="CenterAndExpand">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="Auto"/>
+                                    <ColumnDefinition Width="Auto"/>
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding imgLink}" HorizontalOptions="Center"  VerticalOptions="Start" WidthRequest="20" HeightRequest="20" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding headerMenu}" Font="9" FontAttributes="Bold" TextColor="Gray" HorizontalOptions="Center" VerticalOptions="Center"  FontSize="15" Grid.Row="0" Grid.Column="2"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <!--<Button Text="Item 1" BackgroundColor="Transparent" x:Name="them" Clicked="Them_OnClicked"/>-->
+            <Label TextColor="Black" Text="Copyright 2017 VNPT Long An All rights"/>
+        </StackLayout>
+    </ScrollView>
+</ContentPage>

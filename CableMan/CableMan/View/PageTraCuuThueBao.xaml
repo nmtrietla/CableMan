@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--//////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2016 VNPT Long An                                                  //
+// All rights reserved.                                                             //
+// Create Date :08-03-2017                                                          //
+// Modify Date :                                                                    //
+// Create By Nguyễn Minh Triết.                                                     //
+//////////////////////////////////////////////////////////////////////////////////////-->
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CableMan.View.PageTraCuuThueBao"
+             Title="CableMan - Tra Cứu Thuê Bao">
+    <TabbedPage.Children>
+        <ContentPage Title="TRA CỨU THÔNG TIN" Padding="2">
+            <!--Icon="Profile.png"-->
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <StackLayout>
+                        <Label Text="Nhập mã thuê bao tra cứu" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Fill"></Label>
+                        <StackLayout Orientation="Horizontal">
+
+                                <Entry x:Name="MaThueBao"    Placeholder="Mã thuê bao"  FontSize="11" FontAttributes="Italic" HorizontalOptions="Start"/>
+                                <Entry x:Name="TenThueBao"   Placeholder="Tên thuê bao" FontSize="11" FontAttributes="Italic" HorizontalOptions="StartAndExpand"/>
+                                <Entry x:Name="NhapDiaChi"   Placeholder="Nhập địa chỉ" FontSize="11" FontAttributes="Italic" HorizontalOptions="Fill"/>
+                                <Image x:Name="ImgFind"      Source="Find32x32.png" VerticalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Entry x:Name="LocThongTin" Placeholder="Nhập từ khóa để lọc thông tin" FontAttributes="Italic"  Text="{Binding TextLocThongTin}"/>
+                        <ListView  x:Name="TraCuuThueBao" RowHeight="200" SeparatorVisibility="None" >
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding TenDVVT}" TextColor="Gray" FontAttributes="Italic" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                                <Label Text="{Binding NgayHT}" TextColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding TenTB}" TextColor="Black" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding MaTB}" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                                <Label Text="{Binding NgayHT}" TextColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding DaiVT}" TextColor="Black" FontAttributes="Bold" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                                <Label Text="{Binding TramVT}" TextColor="Blue" HorizontalOptions="EndAndExpand" VerticalOptions="Center"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding DiaChi}" TextColor="Gray" FontAttributes="Italic" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                            </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                            <!--<Image Source="icon.png" />-->
+                                            <Label Text="{Binding LienHe}" TextColor="Gray" FontAttributes="Italic" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                        </StackLayout>
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding GhiChu}" TextColor="Gray" FontAttributes="Italic" VerticalOptions="Center" VerticalTextAlignment="Center"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ContentPage>
+        <ContentPage Title="TRA CỨU SUY HAO" Padding="2">
+            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                <Grid Row="0" VerticalOptions="Fill" HorizontalOptions="Fill">
+                    <StackLayout>
+                        <Label Text="Nhập mã thuê bao đo kiểm" FontSize="15" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" HorizontalOptions="Fill"></Label>
+                        <StackLayout Orientation="Horizontal">
+                            <Entry x:Name="MaThueBaoSuyHao" Placeholder="Mã thuê bao" FontAttributes="Italic"  HorizontalOptions="FillAndExpand"/>
+                            <Image x:Name="ImgFindSuyHao" Source= "Find32x32.png" HorizontalOptions="EndAndExpand"/>
+                        </StackLayout>
+                        <Entry x:Name="LocThongTinSuyHao" Placeholder="Nhập từ khóa để lọc thông tin" FontAttributes="Italic" Text="{Binding TextLocThongTinSuyHao}"/>
+                        <ListView  x:Name="DoKiem" SeparatorVisibility="None">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout BackgroundColor="#eee" Orientation="Vertical">
+                                            <StackLayout Orientation="Horizontal">
+                                                <!--<Image Source="icon.png" />-->
+                                                <Label Text="{Binding Name}" TextColor="Black" FontAttributes="Bold"/>
+                                                <Label Text="{Binding Value}" TextColor="Gray" FontAttributes="Bold" HorizontalOptions="EndAndExpand"/>
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </Grid>
+            </Grid>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>

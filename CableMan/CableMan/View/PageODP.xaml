@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CableMan.View.PageODP"
+             Title="CableMan - Authentication Code">
+    <ActivityIndicator IsRunning = "{Binding IsLoading}" />
+    <StackLayout Spacing="20" Padding="20"
+                   VerticalOptions="Center">
+        <Entry x:Name="EntryODP" Keyboard="Numeric" Placeholder="ODP"
+               Text="{Binding Odp}"/>
+        <Button x:Name = "ButtonODP"  Text="Xác thực ODP" TextColor="White" FontAttributes="Bold"
+                BackgroundColor="#48a3e6"/>
+        <ActivityIndicator x:Name="ActivityIndicatorLoading" Color="Red"/>
+    </StackLayout>
+</ContentPage>

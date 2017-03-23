@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--//////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2016 VNPT Long An                                                  //
+// All rights reserved.                                                             //
+// Create Date :27-02-2017                                                          //
+// Modify Date :                                                                    //
+// Create By Nguyễn Minh Triết.                                                     //
+//////////////////////////////////////////////////////////////////////////////////////-->
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CableMan.View.PageKetCuoiGanDay"
+            Title="CableMan - Kết Cuối Khả Dụng">
+    <TabbedPage.Children>
+        <ContentPage Title="CÁP ĐỒNG" >
+            <!--Icon="Profile.png"-->
+            <ContentPage.Content>
+                <ListView  x:Name="ListViewKetCuoiKhaDungCapDong" RowHeight="65">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White"
+                        Orientation="Vertical">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding FType}" />
+                                        <StackLayout>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <!--<ColumnDefinition Width="400"></ColumnDefinition>
+                                                    <ColumnDefinition Width="Auto"></ColumnDefinition>-->
+                                                </Grid.ColumnDefinitions  >
+                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding CABI_NAME}" TextColor="Black"/>
+                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding KC}" TextColor="Gray" HorizontalOptions="EndAndExpand" />
+                                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding CABI_ADDR}" TextColor="Gray"/>
+                                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DungLuong}"  TextColor="Gray" HorizontalOptions="EndAndExpand" />
+                                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding DLCapDen}" TextColor="Black"/>
+                                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding SoThueBao}" TextColor="Blue" HorizontalOptions="EndAndExpand" />
+                                            </Grid>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ContentPage.Content>
+        </ContentPage>
+        <ContentPage Title="CÁP QUANG">
+            <ContentPage.Content>
+                <ListView  x:Name="ListViewKetCuoiKhaDungCapQuang" RowHeight="65">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout BackgroundColor="White" 
+                        Orientation="Vertical">
+                                    <!--BackgroundColor="#eee"-->
+                                    <StackLayout Orientation="Horizontal">
+                                        <Image Source="{Binding FType}" />
+                                        <StackLayout>
+                                            <Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                    <RowDefinition Height="*"></RowDefinition>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                                </Grid.ColumnDefinitions  >
+                                                <Label Grid.Row="0" Grid.Column="0" Text="{Binding CABI_NAME}" TextColor="Black"/>
+                                                <Label Grid.Row="0" Grid.Column="1" Text="{Binding KC}" TextColor="Gray" HorizontalOptions="EndAndExpand"/>
+                                                <Label Grid.Row="1" Grid.Column="0" Text="{Binding CABI_ADDR}" TextColor="Gray"/>
+                                                <Label Grid.Row="1" Grid.Column="1" Text="{Binding DungLuong}"  TextColor="Gray" HorizontalOptions="EndAndExpand"/>
+                                                <Label Grid.Row="2" Grid.Column="0" Text="{Binding DLCapDen}" TextColor="Black" />
+                                                <Label Grid.Row="2" Grid.Column="1" Text="{Binding SoThueBao}" TextColor="Blue" HorizontalOptions="EndAndExpand"/>
+                                            </Grid>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </ContentPage.Content>
+        </ContentPage>
+    </TabbedPage.Children>
+</TabbedPage>
+

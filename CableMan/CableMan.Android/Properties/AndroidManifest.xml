@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="auto">
+	<uses-sdk android:minSdkVersion="22" android:targetSdkVersion="23" />
+  <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+  <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+  <uses-permission android:name="android.permission.CALL_PHONE" />
+  <uses-permission android:name="android.permission.SEND_SMS" />
+	<application android:label="CableMan.Android">
+      <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyBoE4ucZ1lkjEh9mz2Lvi-wieAiLoGAx4w" />
+
+  </application>
+</manifest>

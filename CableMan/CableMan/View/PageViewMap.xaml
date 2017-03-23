@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--//////////////////////////////////////////////////////////////////////////////////////
+// Copyright (C) 2017 VNPT Long An                                                  //
+// All rights reserved.                                                             //
+// Create Date :24-02-2017                                                          //
+// Modify Date :                                                                    //
+// Create By Nguyễn Minh Triết.                                                     //
+//////////////////////////////////////////////////////////////////////////////////////-->
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="CableMan.View.PageViewMap" Title="Menu">    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Spacing="0" Padding="0" BackgroundColor="Navy">
+                <!--<BoxView HorizontalOptions="FillAndExpand" HeightRequest="5"
+          VerticalOptions="Start" Color="Navy" />-->
+                <!--<Button  Command="{Binding CheckLocationCommand}" BorderRadius="20" HeightRequest="40" WidthRequest="40"
+          BackgroundColor="Red" HorizontalOptions="Center" VerticalOptions="Start"/>-->
+                <StackLayout HeightRequest="20" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Spacing="20">
+                    <!--BackgroundColor="Maroon"-->
+                    <StackLayout VerticalOptions="End" HorizontalOptions="FillAndExpand">
+                        <Label Text= "{Binding LocationText}" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" TextColor="White" Font="11" FontAttributes="Bold"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <StackLayout  VerticalOptions="FillAndExpand"  
+                    HorizontalOptions="FillAndExpand">
+                    <maps:Map
+             x:Name="MyMap"
+             IsShowingUser="true"
+             MapType="Street"
+             HasScrollEnabled="True"
+             HasZoomEnabled="True">
+                    </maps:Map>                    
+                </StackLayout>
+                <!--<Slider x:Name="SliderZoom" 
+            Maximum="18.0" 
+            Minimum="1.0" 
+            Value="1.0"
+            ValueChanged="OnSliderChanged" />--> 
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
